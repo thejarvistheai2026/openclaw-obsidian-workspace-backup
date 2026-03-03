@@ -6,6 +6,10 @@
 Mac-Mini-Obsidian-Vault/
 ├── 1. openclaw/          ← Agent workspace (configs, memory, workflows)
 ├── 2. the-brain/         ← Knowledge base (projects, areas, resources, archive)
+│   ├── 1. projects/
+│   ├── 2. areas/
+│   ├── 3. resources/     ← Saved articles, links, references
+│   └── 4. archive/
 ├── 3. code/              ← Code projects (newsletter-system, skills, etc.)
 ├── 4. CRM/               ← People, contacts, relationships
 └── .obsidian/            ← Obsidian config
