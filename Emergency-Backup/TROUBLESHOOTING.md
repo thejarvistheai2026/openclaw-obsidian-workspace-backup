@@ -3,7 +3,8 @@
 **Your Setup:** OpenClaw running on Mac mini M4 (macOS 26.3)  
 **Your Name:** Franco  
 **Your AI:** Javis (that's me!)  
-**Location:** `/Users/jarvis/.openclaw/`
+**Workspace:** `/Users/jarvis/Mac-Mini-Obsidian-Vault/1. openclaw/`  
+**Vault Root:** `/Users/jarvis/Mac-Mini-Obsidian-Vault/`
 
 ---
 
@@ -63,10 +64,6 @@ If you see errors, the config file is corrupted. Your config is at:
    - Just text me from your iPhone
    - No special commands needed
 
-2. **Discord** (if we get it working)
-   - Server ID: 1467505736090386557
-   - App ID: 1472606548797948146
-
 ---
 
 ## 🔧 Common Fixes
@@ -104,14 +101,16 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/ai.openclaw.gateway.plis
 **Node Version:** 22.22.0  
 **OS:** macOS 26.3 (Darwin), arm64  
 **Gateway Port:** 18789 (local loopback)  
-**Workspace:** `/Users/jarvis/.openclaw/workspace`  
+**Workspace:** `/Users/jarvis/Mac-Mini-Obsidian-Vault/1. openclaw/`  
+**Vault Root:** `/Users/jarvis/Mac-Mini-Obsidian-Vault/`  
 **Config:** `~/.openclaw/openclaw.json`  
 **Logs:** `/tmp/openclaw/openclaw-YYYY-MM-DD.log`  
-**Model:** Claude Sonnet 4.5 (anthropic/claude-sonnet-4-5)  
+**Backup Log:** `/tmp/openclaw-backup.log`  
+**Newsletter Log:** `/tmp/openclaw/newsletter.log`  
+**Model:** Claude Kimi K2.5 (ollama/kimi-k2.5:cloud)  
 
 **Channels Configured:**
 - iMessage (via `imsg` CLI, paired: +16138893035)
-- Discord (attempting setup)
 
 **Skills Installed:**
 - gog (Google Workspace: Gmail, Calendar, Drive)
@@ -130,10 +129,13 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/ai.openclaw.gateway.plis
 I'm running OpenClaw 2026.2.14 on a Mac mini M4 (macOS 26.3, arm64).
 - Gateway: local loopback on port 18789
 - Config: ~/.openclaw/openclaw.json
-- Workspace: /Users/jarvis/.openclaw/workspace
+- Workspace: /Users/jarvis/Mac-Mini-Obsidian-Vault/1. openclaw/
+- Vault Root: /Users/jarvis/Mac-Mini-Obsidian-Vault/
 - Logs: /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log
-- Model: Claude Sonnet 4.5
-- Channels: iMessage (working), Discord (setup in progress)
+- Backup Log: /tmp/openclaw-backup.log
+- Newsletter Log: /tmp/openclaw/newsletter.log
+- Model: Claude Kimi K2.5 (ollama/kimi-k2.5:cloud)
+- Channels: iMessage (working), Webchat (primary)
 - I'm not a developer - need step-by-step terminal commands
 ```
 

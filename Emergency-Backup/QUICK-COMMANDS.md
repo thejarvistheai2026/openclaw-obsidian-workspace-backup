@@ -148,9 +148,43 @@ launchctl list | grep openclaw
 **Quick Reference Paths:**
 - Config: `~/.openclaw/openclaw.json`
 - Logs: `/tmp/openclaw/openclaw-YYYY-MM-DD.log`
-- Workspace: `~/Obsidian-Vault/openclaw/`
+- Workspace: `~/Mac-Mini-Obsidian-Vault/1. openclaw/`
+- Vault Root: `~/Mac-Mini-Obsidian-Vault/`
 - Web UI: `http://127.0.0.1:18789/`
+- Backup Log: `/tmp/openclaw-backup.log`
+- Newsletter Log: `/tmp/openclaw/newsletter.log`
+
+## 📧 Newsletter System
+
+### Check if LaunchAgent is loaded
+```bash
+launchctl list | grep com.openclaw.newsletter
+```
+
+### Reload Newsletter Agent
+```bash
+launchctl unload ~/Library/LaunchAgents/com.openclaw.newsletter.plist
+launchctl load ~/Library/LaunchAgents/com.openclaw.newsletter.plist
+```
+
+### Check Newsletter Logs
+```bash
+# Latest log
+tail -50 /tmp/openclaw/newsletter.log
+
+# Recent errors
+tail -50 /tmp/openclaw/newsletter-error.log
+
+# Specific date
+tail -50 /tmp/openclaw/newsletter-$(date +%Y-%m-%d).log
+```
+
+### Run Newsletter Manually
+```bash
+cd "/Users/jarvis/Mac-Mini-Obsidian-Vault/3. code/newsletter-system"
+./scripts/run-scheduled.sh
+```
 
 ---
 
-**Updated:** 2026-02-15
+**Updated:** 2026-03-04

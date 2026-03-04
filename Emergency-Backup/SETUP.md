@@ -37,15 +37,37 @@
 
 ## 📂 Key File Paths
 
+### OpenClaw
 ```
 ~/.openclaw/                           # OpenClaw home
 ~/.openclaw/openclaw.json              # Main config (SENSITIVE - contains tokens)
-~/.openclaw/workspace/                 # Workspace root (AGENTS.md, SOUL.md, etc.)
 ~/.openclaw/agents/main/               # Main agent directory
 ~/.openclaw/agents/main/sessions/      # Session storage
 /tmp/openclaw/                         # Runtime data
 /tmp/openclaw/openclaw-YYYY-MM-DD.log  # Daily logs
 /opt/homebrew/lib/node_modules/openclaw/skills/  # Bundled skills
+```
+
+### Workspace (Obsidian Vault)
+```
+~/Mac-Mini-Obsidian-Vault/              # Vault root
+├── 1. openclaw/                        # Agent workspace
+│   ├── AGENTS.md, SOUL.md, USER.md     # Core agent files
+│   ├── .scripts/daily-backup.sh        # Daily backup script
+│   ├── openclaw-config/                # Sanitized config backup
+│   ├── Emergency-Backup/               # This folder
+│   └── workflows/                      # Automation scripts
+├── 2. the-brain/                       # Knowledge base
+│   ├── 1. projects/
+│   ├── 2. areas/
+│   ├── 3. resources/                   # Articles, Newsletters
+│   └── 4. archive/
+├── 3. code/                            # Code projects
+│   └── newsletter-system/              # Newsletter automation
+│       ├── scripts/                    # Gmail, RSS, digest scripts
+│       ├── data/state.db               # SQLite database
+│       └── config/sources.conf         # RSS feed config
+└── 4. CRM/                             # People & contacts
 ```
 
 ---
@@ -60,16 +82,19 @@
 - **Compaction Mode:** safeguard
 - **Heartbeat:** Every 30 minutes (main session)
 
-### Workspace Files
+### Workspace Files (in `~/Mac-Mini-Obsidian-Vault/1. openclaw/`)
 - `AGENTS.md` - Agent behavior rules
 - `SOUL.md` - Personality & core values
 - `USER.md` - Info about Franco
 - `IDENTITY.md` - Javis's identity
+- `MEMORY.md` - Long-term memories
 - `TOOLS.md` - Local tool notes
-- `HEARTBEAT.md` - Heartbeat task list (currently empty)
-- `BOOTSTRAP.md` - Onboarding script (delete after first run)
-- `TROUBLESHOOTING.md` - Emergency recovery guide
-- `SETUP.md` - This file
+- `HEARTBEAT.md` - Heartbeat task list
+- `BOOTSTRAP.md` - Onboarding script
+- `SKILL.md` - Skill usage patterns
+- `STYLE.md` - Communication style
+- `Emergency-Backup/TROUBLESHOOTING.md` - Emergency recovery guide
+- `Emergency-Backup/SETUP.md` - This file
 
 ---
 
@@ -159,6 +184,36 @@
 - **Channel:** stable
 - **Check on Start:** true
 - **Update Method:** pnpm (via npm registry)
+
+---
+
+## 💾 Backup System
+
+### Daily Git Backup (23:00)
+**Script:** `~/Mac-Mini-Obsidian-Vault/1. openclaw/.scripts/daily-backup.sh`
+
+| Source | GitHub Repo | URL |
+|--------|-------------|-----|
+| `1. openclaw/` | openclaw-obsidian-workspace-backup | https://github.com/thejarvistheai2026/openclaw-obsidian-workspace-backup |
+| `2. the-brain/` | PARA-Obsidian-vault-backup | https://github.com/thejarvistheai2026/PARA-Obsidian-vault-backup |
+| `4. CRM/` | obsidian-crm | https://github.com/thejarvistheai2026/obsidian-crm |
+| `3. code/newsletter-system/` | jarvis-newsletter-system | https://github.com/thejarvistheai2026/jarvis-newsletter-system |
+
+**LaunchAgent:** `~/Library/LaunchAgents/ai.thejarvis.openclaw.daily-backup.plist`
+**Log:** `/tmp/openclaw-backup.log`
+**Error Log:** `/tmp/openclaw-backup-error.log`
+
+### Newsletter Automation (Sundays + Thursdays 9:00 AM)
+**LaunchAgent:** `~/Library/LaunchAgents/com.openclaw.newsletter.plist`
+**Working Directory:** `/Users/jarvis/Mac-Mini-Obsidian-Vault/3. code/newsletter-system`
+**Log:** `/tmp/openclaw/newsletter.log`
+
+### Recovery Process
+If vault is lost:
+1. Clone all 4 repos above
+2. Place in correct numbered folders
+3. Update OpenClaw config workspace path
+4. Run newsletter scripts to verify paths
 
 ---
 

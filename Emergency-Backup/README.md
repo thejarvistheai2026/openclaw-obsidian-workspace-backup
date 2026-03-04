@@ -18,7 +18,6 @@
 
 1. **Web UI** - http://127.0.0.1:18789/
 2. **iMessage** - Text +16138893035 from your iPhone
-3. **Discord** - (if configured) Server 1467505736090386557
 
 ### If Nothing Works
 
@@ -37,7 +36,8 @@ The web UI (port 18789) is not responding.
 - I'm not a developer, need step-by-step terminal commands
 - Config: ~/.openclaw/openclaw.json
 - Logs: /tmp/openclaw/openclaw-$(date +%Y-%m-%d).log
-- Workspace: ~/Obsidian-Vault/openclaw/
+- Workspace: ~/Mac-Mini-Obsidian-Vault/1. openclaw/
+- Vault Root: ~/Mac-Mini-Obsidian-Vault/
 
 Can you help me debug? Here's what I've tried: [describe what you tried]
 ```
@@ -69,6 +69,19 @@ openclaw gateway restart
 open http://127.0.0.1:18789/
 ```
 
+### Newsletter Automation Not Running
+```bash
+# Check LaunchAgent is loaded
+launchctl list | grep com.openclaw.newsletter
+
+# If not loaded, reload it
+launchctl unload ~/Library/LaunchAgents/com.openclaw.newsletter.plist
+launchctl load ~/Library/LaunchAgents/com.openclaw.newsletter.plist
+
+# Check logs
+tail -f /tmp/openclaw/newsletter.log
+```
+
 ### Can't Reach Via iMessage
 Check that:
 - Messages.app is signed in
@@ -96,12 +109,13 @@ Check that:
 **Device:** Mac mini M4 (macOS 26.3)  
 **OpenClaw Port:** 18789 (local only)  
 **Your Number:** +16138893035 (paired to Javis via iMessage)  
-**Model:** Claude Sonnet 4.5  
-**Workspace:** ~/Obsidian-Vault/openclaw/
+**Model:** Claude Kimi K2.5  
+**Workspace:** `~/Mac-Mini-Obsidian-Vault/1. openclaw/`  
+**Vault Root:** `~/Mac-Mini-Obsidian-Vault/`
 
 **Channels:**
 - ✅ iMessage (working, most reliable backup)
-- ⚠️ Discord (setup in progress)
+- ✅ Webchat (primary interface, via http://127.0.0.1:18789/)
 
 ---
 

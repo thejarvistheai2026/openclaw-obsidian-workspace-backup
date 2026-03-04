@@ -44,11 +44,25 @@ Mac-Mini-Obsidian-Vault/
 3. **Scripts use hardcoded paths** — numbered folders don't change
 4. **Sanitized OpenClaw config** — tokens redacted in backups
 
+## Backup System Updates (2026-03-04)
+
+### Fixes Applied
+- **Newsletter LaunchAgent path corrected** — was pointing to wrong directory (`openclaw/newsletter-system` ➜ `3. code/newsletter-system`)
+- **Git identity configured** — All 4 repos now have proper user.name and user.email
+- **Emergency documentation updated** — All outdated paths corrected
+- **Working paths verified**:
+  - Daily backup: `1. openclaw/.scripts/daily-backup.sh` ✓
+  - LaunchAgent: `~/Library/LaunchAgents/ai.thejarvis.openclaw.daily-backup.plist` ✓
+  - Newsletter: `~/Library/LaunchAgents/com.openclaw.newsletter.plist` ✓
+  - Git repos: All 4 properly configured ✓
+
 ## Workflows
 
 **YouTube Transcripts:** `1. openclaw/workflows/youtube-transcript.sh`
-- Saves to: `2. the-brain/3. resources/[Subject]/`
-- Auto-detects subject from video title
+- **Location:** Always save to `2. the-brain/3. resources/Articles/`
+- **Filename:** Video title only (no date prefix, no timestamp)
+- **Format:** Single-column text with proper paragraph breaks
+- **YAML frontmatter:** Include `captured: YYYY-MM-DD`, `source_url`, and `category: transcript`
 
 ## Obsidian Best Practices
 

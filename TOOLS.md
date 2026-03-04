@@ -37,4 +37,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## Vault Paths (Critical)
+
+**Articles / Captured Content:**
+- **ALWAYS save to:** `2. the-brain/3. resources/Articles/`
+- **Format:** `descriptive-title.md` (NO date prefix)
+- **NOT** directly in `3. resources/` — must be in the `Articles/` subfolder
+- The `captured:` field in YAML frontmatter tracks the date instead
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
