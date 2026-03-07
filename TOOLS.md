@@ -92,4 +92,39 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## Active Systems (2026-03-07)
+
+### Discord Retrospective Capture
+- **Bot:** the-observer#9526
+- **Capture:** 24/7 continuous
+- **Retros:** Sun/Thu @ 22:00
+- **Output:** `memory/discord-retro/*.md`
+- **Docs:** `discord-capture/README.md`
+- **Start:** `cd discord-capture && node bot.js`
+
+### Daily Status Report
+- **Schedule:** Daily @ 08:00
+- **Recipient:** +16138893035 (iMessage)
+- **LaunchAgent:** `ai.thejarvis.openclaw.daily-status`
+- **Logs:** `daily-status.log`, `daily-status.error`
+- **Docs:** `.scripts/daily-status-report.md`
+
+### Google Workspace (gws)
+- **Tool:** `gws` (replaces gog)
+- **Auth:** jarvistheai2026@gmail.com
+- **Skills:** 38 in `skills/` directory
+- **Docs:** `skills/gws/README.md`
+- **Test:** `gws gmail +triage --max 5`
+
+### Complete Schedule
+
+| Time | Sun | Mon | Tue | Wed | Thu | Fri | Sat |
+|------|-----|-----|-----|-----|-----|-----|-----|
+| **08:00** | 📊 Status | 📊 Status | 📊 Status | 📊 Status | 📊 Status | 📊 Status | 📊 Status |
+| **09:00** | 📰 News | | | | 📰 News | | |
+| **22:00** | 💬 Retro | | | | 💬 Retro | | |
+| **23:00** | 💾 Backup | 💾 Backup | 💾 Backup | 💾 Backup | 💾 Backup | 💾 Backup | 💾 Backup |
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
