@@ -1,18 +1,15 @@
-# OpenClaw Workspace Backup
+# gws-cli is a cloned repo, don't commit it
+gws-cli/
 
-Auto-generated backup of agent configuration and memory.
+# OAuth credentials - DO NOT COMMIT
+client_secret.json
 
-## Included
+# Discord captures (transient)
+discord-capture/raw/
 
-- **Configs/** - Agent identity, SOUL, AGENTS.md, etc.
-- **Daily/** - Daily notes and logs
-- **memory/** - Session memory and heartbeat state
-- **workflows/** - Scripts and workflows (YouTube transcript, etc.)
-- **Emergency-Backup/** - Recovery information
+# Logs
+*.log
+*.error
 
-## Excluded
-
-- **.openclaw/** - Runtime session files (transcripts, temp data)
-
----
-*Last backup: 2026-03-02*
+# Node modules
+node_modules/
