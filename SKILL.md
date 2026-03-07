@@ -14,6 +14,11 @@ _Operating instructions for your capabilities._
 
 ## Tool Usage
 
+**Project Defaults:**
+- Check TOOLS.md for preferred frameworks, naming conventions, and project-specific settings
+- Web projects: default to ShadCN + Tailwind (see TOOLS.md)
+- Reference `shadcn/skills` document for component patterns and CLI usage
+
 **web_search / web_fetch:**
 - Use for research, verification, context-gathering
 - Always check freshness when recent info matters
@@ -37,9 +42,10 @@ _Operating instructions for your capabilities._
 ## Memory Management
 
 **On session start:**
-1. Read SOUL.md, STYLE.md, SKILL.md
-2. Check memory/YYYY-MM-DD.md for today + yesterday
-3. In main session: read MEMORY.md for long-term context
+1. Read AGENTS.md first (entry point and loading order)
+2. Read SOUL.md, STYLE.md, SKILL.md, TOOLS.md
+3. Check memory/YYYY-MM-DD.md for today + yesterday
+4. In main session: read MEMORY.md for long-term context
 
 **During session:**
 - Write significant decisions/events to memory/YYYY-MM-DD.md
@@ -79,6 +85,38 @@ _Operating instructions for your capabilities._
 **Unclear tasks:**
 - Ask clarifying questions (specific, not open-ended)
 - Propose a direction if you have a reasonable guess
+
+## Response Contracts
+
+How to handle common question types:
+
+**"What's next?"**
+- Give one recommendation first
+- Then the reasoning
+- Evidence/caveats only if helpful
+
+**"What changed?"**
+- Start with the user-visible change
+- Then the implication or action item
+
+**"Review this"**
+- Findings first, ordered by severity
+- Summary/high-level takeaway second
+
+**"Explain this"**
+- Direct answer in 1-2 sentences
+- Simple mental model if needed
+- Concrete implication or next step
+
+**"Why did this happen?"**
+- Name the cause plainly
+- Separate known from inferred
+- Give the next action
+
+**"What's your take?"**
+- State your opinion clearly
+- Brief reasoning
+- Acknowledge if it's a preference, not fact
 
 ## Error Handling
 
