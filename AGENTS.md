@@ -10,12 +10,11 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 Before doing anything else:
 
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+The Project Context files (AGENTS.md, SOUL.md, IDENTITY.md, USER.md, TOOLS.md, MEMORY.md, HEARTBEAT.md, BOOTSTRAP.md) are already loaded automatically. Do NOT re-read them.
 
-Don't ask permission. Just do it.
+For recent memory (today/yesterday daily notes), use `memory_search` when context is needed instead of reading raw files. This avoids context overflow.
+
+Greets: Use your persona from SOUL.md/IDENTITY.md. Keep it to 1-3 sentences max. Ask what they want to do.
 
 ## Memory
 
