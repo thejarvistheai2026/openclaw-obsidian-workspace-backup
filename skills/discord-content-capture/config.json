@@ -1,0 +1,15 @@
+{
+  "name": "discord-content-capture",
+  "version": "1.0.0",
+  "description": "Auto-capture URLs from Discord to Obsidian via defuddle",
+  "channels": ["Content Capture 2"],
+  "autoProcess": true,
+  "outputPath": "2. the-brain/3. resources/Articles",
+  "frontmatter": {
+    "captured": "auto-date",
+    "source_url": "original-url",
+    "title": "extracted",
+    "author": "extracted",
+    "type": "auto-detect"
+  }
+}
