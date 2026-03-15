@@ -48,6 +48,56 @@ After making the change:
 
 ---
 
+## SPECIAL RULE: Model Changes
+
+**Before ANY model change, you MUST verify tool support.**
+
+### The Test
+
+Run this command BEFORE proposing a model change:
+
+```bash
+ollama show [model-name] | grep -i "tools\|functions"
+```
+
+Or test with a simple tool call:
+
+```bash
+curl -s http://127.0.0.1:11434/api/generate -d '{
+  "model": "[model-name]",
+  "prompt": "Test",
+  "tools": [{"type": "function", "function": {"name": "test"}}],
+  "stream": false
+}' | head -5
+```
+
+### If Model Doesn't Support Tools
+
+**STOP.** Do not propose this model for OpenClaw.
+
+OpenClaw requires tool support for:
+- Web search
+- File operations
+- System commands
+- All other tools
+
+**Models known to NOT support tools:**
+- ❌ `deepseek-r1` (reasoning models lack tool support)
+- ❌ Any model without explicit "tool" or "function calling" capability
+
+### Model Change Checklist
+
+Before proposing a model switch:
+- [ ] Verify model is downloaded locally
+- [ ] **Test tool support** (mandatory)
+- [ ] Check model size (under 10GB for Mac Mini)
+- [ ] Confirm fallback order
+- [ ] Get explicit approval
+
+**Failure to test tool support = broken system.**
+
+---
+
 ## Examples
 
 ### ✅ CORRECT
